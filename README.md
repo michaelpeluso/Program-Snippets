@@ -1,7 +1,7 @@
 # Processor-Simulation #
 An simulation of serial computing, timesharing, or multitasking. Written in Python.
 
-**A config file must be run with this document in which includes the instructions for this program. The config file has the following structure:**
+**A config file must be run with this document in which includes the instructions for this program. The config.txt file serves as an example. The config file has the following structure:**
 
 * First line: indicates the total number of lines in the config file
 * Second line: the unit of time used. cycle, s, ms, ns are for cycles, seconds, milliseconds, and nanoseconds respectively
