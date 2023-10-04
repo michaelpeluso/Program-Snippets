@@ -2,9 +2,7 @@
 Michael Peluso
 NJIT ID 31522013
 23 March 2023
-Alexandros Gerbessiotis
 CS 332 H02
-MP2
 '''
 
 # Import
@@ -265,20 +263,7 @@ for t in tasks :
         i = i - 1
         print(value, end='\t')
     print()
-    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+'''
+end of file
+'''
