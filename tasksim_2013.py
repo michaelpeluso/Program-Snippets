@@ -264,6 +264,4 @@ for t in tasks :
         print(value, end='\t')
     print()
 
-'''
-end of file
-'''
+# end of file
