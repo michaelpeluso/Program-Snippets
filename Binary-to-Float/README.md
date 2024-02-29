@@ -1,4 +1,4 @@
-A C program that prints the binary values of a floating point number which is passed as a parameter. 
+A C program that prints the binary values of a floating point number, and vise versa, when passed a parameter.
 
 For example, 
 "00111111010000000000000000000000" would be printed when passed "ftob 0.75"\
