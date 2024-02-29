@@ -8,7 +8,7 @@ A simulation of serial computing, timesharing, or multitasking. Written in Pytho
 * Third line: the number of tasks that will be used
 * Fourth line: contains sc, ts, or mt to indicate serial computing, timesharing or multitasking respectively
 * Fifth line: contains the quantum or the timeslice duration if mt or ts has been chosen - otherwise it is set to 0
-* * Sixth line: may contain a request for CPU utilization for a given period of time
+* Sixth line: may contain a request for CPU utilization for a given period of time
 
 The amount of lines to follow is equal to the number appearing in line 3. There is one line per task indicated. Every line describes a task by four attributes: the name (label) of the task (only the 26 capital case English letters can appear), the arrival time of the task, the CPU time of the task, and the I/O time of the task. 
 
