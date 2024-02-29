@@ -1,17 +1,100 @@
-# Processor-Simulation #
-A simulation of serial computing, timesharing, or multitasking. Written in Python.
+# Processor-Simulation Documentation
 
-**A config file must be run with this document in which includes the instructions for this program. The config.txt file serves as an example. The config file has the following structure:**
+This Python program simulates task scheduling in an operating system environment. It supports three scheduling algorithms: Serial Computing (SC), Timesharing (TS), and Multitasking (MT). The program reads configuration details from a file named `config.txt`.
 
-* First line: indicates the total number of lines in the config file
-* Second line: the unit of time used. cycle, s, ms, ns are for cycles, seconds, milliseconds, and nanoseconds respectively
-* Third line: the number of tasks that will be used
-* Fourth line: contains sc, ts, or mt to indicate serial computing, timesharing or multitasking respectively
-* Fifth line: contains the quantum or the timeslice duration if mt or ts has been chosen - otherwise it is set to 0
-* Sixth line: may contain a request for CPU utilization for a given period of time
+## Setup
 
-The amount of lines to follow is equal to the number appearing in line 3. There is one line per task indicated. Every line describes a task by four attributes: the name (label) of the task (only the 26 capital case English letters can appear), the arrival time of the task, the CPU time of the task, and the I/O time of the task. 
+To run the simulation, ensure you have Python installed on your system. Then, follow these steps:
 
-**All the tasks exhibit the following limited execution structure:**
+1. Clone the repository to your local machine.
+2. Place your desired configuration file (`config.txt`) in the same directory as the Python script.
+3. Execute the Python script by running `python processor_simulation.py`.
 
-CPU runs first, before I/O devices. Consider that numbers will be kept small. Thus a 32-bit integer (signed or unsigned) would be more than enough. Moreover any turnaround time would also be small enough to fit into such an integer.
+## Configuration File Structure
+
+The `config.txt` file serves as input for the simulation. It follows a specific structure:
+
+1. **Total Lines**: Indicates the total number of lines in the file.
+2. **Unit of Time**: Specifies the unit of time used (e.g., cycles, seconds, milliseconds, nanoseconds).
+3. **Number of Tasks**: Specifies the total number of tasks.
+4. **Scheduling Algorithm**: Specifies the scheduling algorithm (SC, TS, or MT).
+5. **Timeslice Duration**: Specifies the quantum or timeslice duration (applicable only for TS and MT).
+6. **CPU Utilization Request** (Optional): Requests CPU utilization for a given period.
+
+After these initial lines, each subsequent line represents a task with the following attributes:
+- Task name (only capital case English letters).
+- Arrival time of the task.
+- CPU time required by the task.
+- I/O time required by the task.
+
+## Task Execution Structure
+
+All tasks adhere to the following execution structure:
+- CPU processing occurs before I/O operations.
+- Tasks have limited execution, ensuring that turnaround times remain within a manageable range.
+
+## Examples
+
+### Example 1: Serial Computing (SC)
+```
+6
+s
+3
+sc
+0
+A 0 8 0
+B 2 4 0
+C 5 6 0
+```
+Explanation:
+- There are 3 tasks (A, B, and C).
+- The SC algorithm is selected.
+- Task A arrives at time 0, requires 8 units of CPU time, and has no I/O operations.
+- Task B arrives at time 2, requires 4 units of CPU time, and has no I/O operations.
+- Task C arrives at time 5, requires 6 units of CPU time, and has no I/O operations.
+- The tasks will be executed serially, one after another, according to their arrival times.
+
+### Example 2: Timesharing (TS)
+```
+7
+ms
+4
+ts
+3
+A 0 10 0
+B 1 5 0
+C 2 8 0
+D 4 6 0
+```
+Explanation:
+- There are 4 tasks (A, B, C, and D).
+- The TS algorithm is selected with a timeslice of 3 milliseconds.
+- Task A arrives at time 0, requires 10 units of CPU time, and has no I/O operations.
+- Task B arrives at time 1, requires 5 units of CPU time, and has no I/O operations.
+- Task C arrives at time 2, requires 8 units of CPU time, and has no I/O operations.
+- Task D arrives at time 4, requires 6 units of CPU time, and has no I/O operations.
+- Tasks will be executed in a round-robin fashion with each task receiving a maximum of 3 milliseconds of CPU time before being preempted.
+
+### Example 3: Multitasking (MT)
+```
+8
+ns
+5
+mt
+1
+A 0 7 0
+B 1 4 0
+C 1 6 0
+D 3 5 0
+E 4 3 0
+```
+Explanation:
+- There are 5 tasks (A, B, C, D, and E).
+- The MT algorithm is selected with a timeslice of 1 nanosecond.
+- Task A arrives at time 0, requires 7 units of CPU time, and has no I/O operations.
+- Task B arrives at time 1, requires 4 units of CPU time, and has no I/O operations.
+- Task C arrives at time 1, requires 6 units of CPU time, and has no I/O operations.
+- Task D arrives at time 3, requires 5 units of CPU time, and has no I/O operations.
+- Task E arrives at time 4, requires 3 units of CPU time, and has no I/O operations.
+- Tasks will be executed concurrently with preemption, allowing each task to run for at most 1 nanosecond before being swapped out.
+
