@@ -1,6 +1,8 @@
 # Program Snippets
 Here is a colleciton of small programming projects I have developed over the past years. Below is a brief explanation for each directory. View them individually to see a more in-depth description of each.
 
+***
+
 - ### Binary-to-Float
 This repository contains two C programs that facilitate the conversion between floating-point numbers and their binary representations. The programs are named ftob.c and btof.c.
 
