@@ -8,7 +8,7 @@ This Java project provides an implementation of a Binary Search Tree (BST). The 
 
 2. **BinarySearchTree.java**: This file extends the `BinaryTree` class and implements the functionality specific to a binary search tree. It includes methods for insertion, removal, and searching, along with helper methods for tree traversal and manipulation.
 
-3. **BST_Tests.java**: This file contains a series of test cases to validate the functionality of the `BinarySearchTree` class. It covers various scenarios including inserting, removing, and searching elements in the tree, handling duplicates, different data types (integer, double, string), and edge cases like empty tree or single-node tree.
+3. **BST_Tests.java**: This file contains a series of test cases to validate the functionality of the BinarySearchTree class. The test suite covers various scenarios including inserting, removing, and searching elements in the tree, handling duplicates, different data types (integer, double, string, etc.), and edge cases like empty tree or single-node tree.
 
 4. **Daikon_Tests**: This directory includes a .sh and a .txt file. `run_tests.sh` is a bash script that executes the necessary commands to generate `BST_Tests.txt` using [The Daikon Invariant Detector](https://plse.cs.washington.edu/daikon/download/doc/daikon.html). BST_Tests.txt contains an expressive list of generated invariants for this data structure.
 
