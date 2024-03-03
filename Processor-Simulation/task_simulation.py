@@ -1,8 +1,10 @@
 '''
 Michael Peluso
-NJIT ID 31522013
-23 March 2023
-CS 332 H02
+March 2023
+
+This Python program simulates task scheduling in an operating system environment.
+It supports three scheduling algorithms: Serial Computing (SC), Timesharing (TS), and Multitasking (MT). 
+The program reads configuration details from a file named config.txt.
 '''
 
 # Import
@@ -20,11 +22,6 @@ config_filename = sys.argv[1]
 
 # Open and read the configuration file
 with open(config_filename) as f:
-    lines = f.readlines()
-
-# Open File
-with open("config.txt") as f:
-#with open(sys.argv[1]) as f:
     lines = f.readlines()
 
 # Gather config values
@@ -115,7 +112,7 @@ elif scheduling == "ts" :
                 remainingTasks.remove(t)
                 ioQueue.pop(0)
 
-        # Proccess CPU
+        # Process CPU
         t = queue[0]
         if t['arr'] <= time :
         
@@ -134,20 +131,23 @@ elif scheduling == "ts" :
             if t['remainingCPU'] <= 0 and t not in ioQueue and t['compl'] == None :
                     ioQueue.append(t)
 
+        # Increment time
+        time = time + 1
+
         # Cycle queue
         if time % timeslice == 0 or timeslice == 1 :
             queue.append(queue.pop(0))
-                    
-        # Incrememnt time
-        time = time + 1
                 
         # End simulation
         if len(remainingTasks) == 0 :
             tasksToComplete = False
 
     # CPU utilization calculation
-    if cpuUtil != None and cpuUtil[1] - cpuUtil[0] > 0 :
-        util = util / (cpuUtil[1] - cpuUtil[0]) * 100
+    if cpuUtil != None :
+        if cpuUtil[1] - cpuUtil[0] > 0 :
+            util = util / (cpuUtil[1] - cpuUtil[0]) * 100
+        else :
+            util = "invalid range"
 
 
 # Multitasking
@@ -155,7 +155,7 @@ elif scheduling == "mt" :
     tasks = sorted(tasks, key = lambda x: x['name'])
     remainingTasks = tasks.copy()
 
-    # Preemtive checks
+    # Preemptive checks
     for t in tasks :
 
         # Add tasks arriving at time = 0
@@ -172,7 +172,7 @@ elif scheduling == "mt" :
     
     # Simulate OS
     while tasksToComplete :
-
+        
         # Process current I/O
         if len(ioQueue) > 0 :
             t = ioQueue[0]
@@ -204,7 +204,7 @@ elif scheduling == "mt" :
                 if cpuUtil != None and time > cpuUtil[0] and time <= cpuUtil[1] :
                     util = util + 1
 
-            # Task compeltes on CPU
+            # Task completes on CPU
             if t['remainingCPU'] <= 0 :
                 queue.pop(0)
                 currTS = timeslice + 1
@@ -226,7 +226,7 @@ elif scheduling == "mt" :
         else :
             currTS = timeslice + 1
                     
-        # Incrememnt time
+        # Increment time
         time = time + 1
         currTS = currTS - 1
 
@@ -272,5 +272,3 @@ for t in tasks :
         i = i - 1
         print(value, end='\t')
     print()
-
-# end of file
