@@ -16,7 +16,6 @@ import math
 if len(sys.argv) < 2:
     print("Usage: python processor_simulation.py <config_filename>")
     sys.exit(1)
-
 config_filename = sys.argv[1]
 
 # Open and read the configuration file
