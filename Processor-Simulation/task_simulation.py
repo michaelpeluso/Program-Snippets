@@ -27,7 +27,6 @@ with open("config.txt") as f:
 #with open(sys.argv[1]) as f:
     lines = f.readlines()
 
-
 # Gather config values
 confLines = int(lines[0])
 unit = lines[1].strip()
