@@ -50,6 +50,7 @@ Each row represents a task, and the columns represent different metrics:
 
 
 # Example Executions
+Below demonstrate an example execution for each type of processing as well as gives an in-depth explaination of its output.
 
 ## Example 1: Serial Computing (SC)
 ### Config.txt
