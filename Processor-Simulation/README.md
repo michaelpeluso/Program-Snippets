@@ -54,6 +54,15 @@ Explanation:
 - Task C arrives at time 5, requires 6 units of CPU time, and has no I/O operations.
 - The tasks will be executed serially, one after another, according to their arrival times.
 
+Gnatt Chart:
+```
+Time | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+----------------------------------------------
+ A   | A | A | A | A | A | A | A | A |   |   |
+ B   |   |   | B | B | B | B |   |   |   |   |
+ C   |   |   |   |   |   | C | C | C | C | C |
+```
+
 ### Example 2: Timesharing (TS)
 ```
 7
@@ -74,6 +83,16 @@ Explanation:
 - Task C arrives at time 2, requires 8 units of CPU time, and has no I/O operations.
 - Task D arrives at time 4, requires 6 units of CPU time, and has no I/O operations.
 - Tasks will be executed in a round-robin fashion with each task receiving a maximum of 3 milliseconds of CPU time before being preempted.
+
+Gnatt Chart:
+```
+Time | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 |
+------------------------------------------------------------------------
+ A   | A | A | A |   | A | A | A |   | A | A |    |    |    |    |    |
+ B   |   | B | B | B | B |   |   | B | B | B |    |    |    |    |    |
+ C   |   |   | C | C | C | C | C | C |   |   | C  | C  |    |    |    |
+ D   |   |   |   |   | D | D | D | D | D | D | D  | D  | D  |    |    |
+```
 
 ### Example 3: Multitasking (MT)
 ```
@@ -97,4 +116,15 @@ Explanation:
 - Task D arrives at time 3, requires 5 units of CPU time, and has no I/O operations.
 - Task E arrives at time 4, requires 3 units of CPU time, and has no I/O operations.
 - Tasks will be executed concurrently with preemption, allowing each task to run for at most 1 nanosecond before being swapped out.
+
+Gantt Chart:
+```
+Time | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 |
+--------------------------------------------------------------------
+ A   | A | A | A | A | A | A | A |   |   |   |    |    |    |    |
+ B   |   | B | B | B | B | B |   | B |   |   |    |    |    |    |
+ C   |   | C | C | C | C | C |   | C | C |   |    |    |    |    |
+ D   |   |   |   | D | D | D | D | D | D | D |  D |    |    |    |
+ E   |   |   |   |   | E | E | E | E | E | E |  E |  E |    |    |
+```
 
