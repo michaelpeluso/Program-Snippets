@@ -12,6 +12,17 @@ from datetime import date
 from datetime import datetime
 import math
 
+# Check command arguments
+if len(sys.argv) < 2:
+    print("Usage: python processor_simulation.py <config_filename>")
+    sys.exit(1)
+
+config_filename = sys.argv[1]
+
+# Open and read the configuration file
+with open(config_filename) as f:
+    lines = f.readlines()
+
 # Open File
 with open("config.txt") as f:
 #with open(sys.argv[1]) as f:
