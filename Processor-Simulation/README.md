@@ -36,6 +36,7 @@ All tasks adhere to the following execution structure:
 # Example Executions
 
 ## Example 1: Serial Computing (SC)
+### Config.txt
 ```
 6
 s
@@ -75,6 +76,7 @@ Time | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
 ```
 
 ## Example 2: Timesharing (TS)
+### Config.txt
 ```
 7
 ms
@@ -118,6 +120,7 @@ Time | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 |
 ```
 
 ## Example 3: Multitasking (MT)
+### Config.txt
 ```
 8
 ns
