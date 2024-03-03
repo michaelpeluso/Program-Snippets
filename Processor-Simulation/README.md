@@ -26,6 +26,9 @@ After these initial lines, each subsequent line represents a task with the follo
 - Arrival time of the task.
 - CPU time required by the task.
 - I/O time required by the task.
+- Task completion time.
+- Task turnaround time.
+- Task response time.
 
 ## Task Execution Structure
 
