@@ -20,7 +20,7 @@ Compile **ftob.c** using a C compiler, and then run the compiled program with th
 
 #### Example:
 
-- Run:
+Run:
 ```bash
 ./ftob 0.75
 ```
@@ -42,7 +42,7 @@ Compile **btof.c** using a C compiler, and then run the compiled program with th
 
 #### Example:
 
-- Run:
+Run:
 ```bash
 ./btof '00111110100110011001100110011010'
 ```
