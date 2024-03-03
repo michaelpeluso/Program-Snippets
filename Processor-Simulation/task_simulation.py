@@ -14,7 +14,7 @@ import math
 
 # Check command arguments
 if len(sys.argv) < 2:
-    print("Usage: python processor_simulation.py <config_filename>")
+    print("Usage: python task_simulation.py <config_filename>")
     sys.exit(1)
 config_filename = sys.argv[1]
 
