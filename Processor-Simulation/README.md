@@ -69,7 +69,7 @@ C 5 6 0
 ```
 processor_simulation.py run  03/02/24  HH:MM:SS  3 jobs ; unit of time is 1s
 SERIAL COMPUTING 3s
-    Arr.    CPU     I/O     Compl   Tr      Rt
+        Arr.    CPU     I/O     Compl   Tr      Rt
 A       0       8       0       8       8       0
 B       2       4       0       12      10      0
 C       5       6       0       18      13      0
