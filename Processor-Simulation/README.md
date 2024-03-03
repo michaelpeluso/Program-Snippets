@@ -8,7 +8,10 @@ To run the simulation, ensure you have Python installed on your system. Then, fo
 
 1. Clone the repository to your local machine.
 2. Place your desired configuration file (`config.txt`) in the same directory as the Python script.
-3. Execute the Python script by running `python task_simulation.py <config_filename>`.
+3. Execute the Python script by running the command below.
+```
+python task_simulation.py <config_filename>
+```
 
 ## Configuration File Structure
 
