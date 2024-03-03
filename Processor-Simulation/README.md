@@ -1,4 +1,4 @@
-# Processor-Simulation Documentation
+# Task-Simulation Overview
 
 This Python program simulates task scheduling in an operating system environment. It supports three scheduling algorithms: Serial Computing (SC), Timesharing (TS), and Multitasking (MT). The program reads configuration details from a file named `config.txt`.
 
@@ -8,7 +8,7 @@ To run the simulation, ensure you have Python installed on your system. Then, fo
 
 1. Clone the repository to your local machine.
 2. Place your desired configuration file (`config.txt`) in the same directory as the Python script.
-3. Execute the Python script by running `python processor_simulation.py`.
+3. Execute the Python script by running `python task_simulation.py <config_filename>`.
 
 ## Configuration File Structure
 
@@ -32,6 +32,19 @@ After these initial lines, each subsequent line represents a task with the follo
 All tasks adhere to the following execution structure:
 - CPU processing occurs before I/O operations.
 - Tasks have limited execution, ensuring that turnaround times remain within a manageable range.
+
+# Program Output
+The output shows the simulation results of task scheduling using the Timesharing (TS) algorithm with a timeslice of 2 seconds. The CPU utilization, within the specified time range of 0s to 12s, is calculated to be 67%.
+
+Each row represents a task, and the columns represent different metrics:
+
+- **Arr.**: Arrival time of the task.
+- **CPU**: Time spent on the CPU.
+- **I/O**: Time spent on input/output operations.
+- **Compl**: Completion time of the task.
+- **Tr**: Turnaround time, which is the difference between completion time and arrival time.
+- **Rt**: Response time, which is the difference between completion time and the sum of CPU and I/O times.
+
 
 # Example Executions
 
