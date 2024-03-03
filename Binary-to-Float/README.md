@@ -18,8 +18,6 @@ This C program, **ftob.c**, converts a floating-point number to its binary repre
 
 Compile **ftob.c** using a C compiler, and then run the compiled program with the desired floating-point number as a parameter.
 
-#### Example:
-
 Run:
 ```bash
 ./ftob 0.75
@@ -39,8 +37,6 @@ This C program, **btof.c**, converts a binary string to its decimal floating-poi
 ### Usage
 
 Compile **btof.c** using a C compiler, and then run the compiled program with the desired binary string as a parameter.
-
-#### Example:
 
 Run:
 ```bash
