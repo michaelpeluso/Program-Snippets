@@ -9,5 +9,8 @@ This repository contains two C programs that facilitate the conversion between f
 - ### BinarySearchTree
 This Java project provides an implementation of a Binary Search Tree (BST). The BST is a fundamental data structure that allows for efficient searching, insertion, and removal of elements, providing an average-case time complexity of O(log n) for these operations.
 
+- ### Motion-Detector
+This project is a simple implementation of real-time video motion detection using JavaScript and HTML5. It utilizes the user's webcam to capture live video feed, processes each frame, and highlights areas where motion is detected.
+
 - ### Processor-Simulation
 This Python program simulates task scheduling in an operating system environment. It supports three scheduling algorithms: Serial Computing (SC), Timesharing (TS), and Multitasking (MT). The program reads configuration details from a file named config.txt.
