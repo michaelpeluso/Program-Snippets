@@ -17,15 +17,13 @@ let changedPixelsList = [];
 let highlights = [];
 
 // Get live video feed
-// Get live video feed with preferred camera
-const constraints = { video: { facingMode: 'environment' } }; // Use 'user' for front camera
-navigator.mediaDevices.getUserMedia(constraints)
+navigator.mediaDevices.getUserMedia({ video: true })
     .then(stream => {
         video.srcObject = stream;
         video.onloadedmetadata = () => video.play();
     })
     .catch(err => console.error('Error accessing camera:', err));
-    
+        
     
 // Function to process frames at a controlled frame rate
 function processFrames() {
