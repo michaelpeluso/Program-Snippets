@@ -24,12 +24,12 @@ This project is a simple implementation of real-time video motion detection usin
 
 You can customize the following parameters in `index.js`:
 
-- `frameDelayMilliseconds`: Adjust the frame processing rate in milliseconds.
-- `pixelChangeThreshold`: Set the threshold for pixel intensity change to detect motion.
-- `pixelCountThreshold`: Define the minimum number of changed pixels to consider as motion.
-- `medianFilterRadius`: Control the radius of the median filter for noise reduction.
-- `minPixelGroup`: Define the minimum number of pixels in a motion group to be considered significant.
-- `maxBoxDistance`: Set the maximum distance between bounding boxes to consider them as part of the same motion.
+- `Frame Delay Interval`: Adjust the frame processing rate in milliseconds.
+- `Pixel Change Threshold`: Set the threshold for pixel intensity change to detect motion.
+- `Minimum Pixel Group Size`: Define the minimum number of pixels in a motion group to be considered significant.
+- `Minimum Box Separation Distance`: Set the minimum distance between bounding boxes to consider them as separate motion events.
+- `Pixel Count Threshold`: Define the minimum percentage of changed pixels to trigger motion detection.
+- `Gaussian Filter Radius`: Control the radius of the Gaussian filter for image processing.
 
 ## Dependencies
 
