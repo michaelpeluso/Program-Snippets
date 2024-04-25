@@ -33,6 +33,10 @@ You can customize the following parameters in `index.js`:
 
 Additionally, you can switch between black and white mode (`isBlack`) and upload a video file for motion detection.
 
+## Learn More
+
+You can view my blog by opening `index.html` in a browser. It provides a detailed graphical explanation of the code, outlines my future goals for the project, and discusses its practical applications. Additionally, this webpage provides access to my comprehensive presentation that offers visual explanations of the above parameters.
+
 ## Dependencies
 
 This project has no external dependencies other than a modern web browser with webcam support.
