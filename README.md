@@ -14,7 +14,3 @@ This project is a simple implementation of real-time video motion detection usin
 
 - ### Processor-Simulation
 This Python program simulates task scheduling in an operating system environment. It supports three scheduling algorithms: Serial Computing (SC), Timesharing (TS), and Multitasking (MT). The program reads configuration details from a file named config.txt.
-
-- ### Motion-Detector
-This Python script simulates particles moving and colliding within a window using basic physics principles. It utilizes OpenGL for rendering and GLFW for window management.
-
