@@ -17,7 +17,7 @@ let highlights = [];
 // user defined variables
 let frameDelayMilliseconds = 40;
 let pixelChangeThreshold = 40; // 0 - 255
-let pixelCountThreshold = totalPixels * 0.1;
+let pixelCountThreshold = totalPixels * 0.01;
 let minPixelGroup = 250;
 let minBoxDistance = 200;
 let gaussianFilterRadius = 1;
