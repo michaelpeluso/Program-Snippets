@@ -15,6 +15,9 @@ This analysis uncovers key trends in the AI-driven job market, highlighting indu
 - ### Motion-Detector
 This project is a simple implementation of real-time video motion detection using JavaScript and HTML5. It utilizes the user's webcam to capture live video feed, processes each frame, and highlights areas where motion is detected.
 
+- ### Neural-Networks
+Inspired by Andrew Trask's "Grokking Deep Learning", this repository contains files from his course repositry as well as personal scripts applying theories described in the book.
+ 
 - ### Processor-Simulation
 This Python program simulates task scheduling in an operating system environment. It supports three scheduling algorithms: Serial Computing (SC), Timesharing (TS), and Multitasking (MT). The program reads configuration details from a file named config.txt.
 
