@@ -1,6 +1,8 @@
 # Spacial Hashing a Particle Simulation
 
-This Python script simulates particles moving and colliding within a window using basic physics principles. It utilizes OpenGL for rendering and GLFW for window management. The simulation employs spatial hashing to optimize collision detection between particles, significantly improving performance in scenarios with a large number of particles.
+This Python script simulates particles moving and colliding within a window using basic physics principles. It utilizes OpenGL for rendering and GLFW for window management. The simulation employs spatial hashing to optimize collision detection between particles, significantly improving performance in scenarios with a large number of particles. 
+
+This implementation reduces the complexity of collision detection from *`O(n²)`* to approximately *`O(n+k)`*, where *`n`* is the number of particles and *`k`* is the number of potential collisions within neighboring cells.
 
 ## Introduction
 
