@@ -22,4 +22,4 @@ Inspired by Andrew Trask's "Grokking Deep Learning", this repository contains fi
 This Python program simulates task scheduling in an operating system environment. It supports three scheduling algorithms: Serial Computing (SC), Timesharing (TS), and Multitasking (MT). The program reads configuration details from a file named config.txt.
 
 - ### Spacial-Hash
-The simulation initializes a number of particles with random positions and velocities. Particles are affected by gravity, friction, and collisions with other particles and the window boundaries. To handle collisions efficiently, especially as the number of particles increases, the simulation implements a spatial hash.
+A 2D simulation of particles colliding particles, using a spacial hash to efficiently optimize collision detection from *O(n²)* to *O(n+k)*.
