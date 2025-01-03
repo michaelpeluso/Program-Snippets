@@ -1,5 +1,5 @@
 # Program Snippets
-Here is a colleciton of small programming projects I have developed over the past years. Below is a brief explanation for each directory. View them individually to see a more in-depth description of each.
+Here is a colleciton of small, on-week programming projects I have developed over the past years. Below is a brief explanation for each directory. View them individually to see a more in-depth description of each.
  
 ***
 
