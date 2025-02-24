@@ -1,3 +1,5 @@
+[Live Demo](https://michaelpeluso.github.io/Program-Snippets/Motion-Detector/)
+
 # Video Motion Detection
 
 This project is a simple implementation of real-time video motion detection using JavaScript and HTML5. It utilizes either an uploaded video or the user's webcam to capture video feed, processes each frame, and highlight areas where motion is detected.
